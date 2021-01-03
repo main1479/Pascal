@@ -1,0 +1,41 @@
+.finance-advisor-page{
+
+    .header{
+        background: #388888;
+    }
+
+
+    section.portfolio-builder{
+        background: #fff;
+    }
+
+    section.with-investor-eq{
+        .phone-screen-box{
+            position: relative;
+        }
+
+        .investor-phone-screen{
+            left: 0%;
+            transform: translate(0%, -27%);
+
+            @media only screen and (max-width:$laptop-port){
+                max-width: 250px;
+                position: relative;
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    section.cta{
+        background: #388888;
+    }
+    
+    section.flexible-structure{
+        background: #F7F7F7;
+    }
+    section.news-letter{
+        background: #388888;
+    }
+
+
+}

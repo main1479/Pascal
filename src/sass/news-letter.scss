@@ -1,0 +1,51 @@
+.news-letter{
+    padding: 13rem 0;
+    background: var(--c-secondary);
+
+
+    .new__letter-form{
+        display: flex;
+        align-items: center;
+        max-width: 610px;
+        margin: 0 auto;
+        margin-top: 5rem;
+        height: 55px;
+
+        @media only screen and (max-width: $mbl-land){
+            flex-direction: column;
+            height: auto;
+
+        }
+
+        .email{
+            width: 100%;
+            padding: 1.35rem 3rem;
+            border: none;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 300;
+            height: 55px;
+            @media only screen and (max-width: $mbl-land){
+                border-radius: 100px;
+                margin-bottom: 20px;
+                
+            }
+        }
+        input.btn{
+            border-radius: 0;
+            border: 0;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media only screen and (max-width: $mbl-land){
+                border-radius: 100px;
+                
+            }
+        }
+    }
+}

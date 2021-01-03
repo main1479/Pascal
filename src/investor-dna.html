@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ================ fonts =================== -->
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <!-- =============== font-awesome ================ -->
+    <script src="https://kit.fontawesome.com/bdc84e071b.js" crossorigin="anonymous"></script>
+
+    <!-- ================= css files ====================== -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="investor-dna-page">
+
+<!-- =========================================== -->
+<!-- ============= header area start =========== -->
+<!-- =========================================== -->
+<header class="header">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__flex">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="pascal">
+                </a>
+
+                <!-- menu's css can be found in header.scss file -->
+                <ul class="nav__menu">
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            about
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            insights
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            solutions
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            InvestorEQ
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav__social">
+                    <a href="#" class="nav__social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="nav__social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="nav__social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="nav__social-icon">
+                        <i class="far fa-envelope"></i>
+                    </a>
+
+                    <!-- ================ header button ================= -->
+                    <a href="#" class="btn outlined">subscribe</a>
+                </div>
+
+                <!-- ========================================================== -->
+                <!-- ===================== mobile nav ========================= -->
+                <!-- ========================================================== -->
+
+                <div class="mobile__nav">
+                    <div onclick="navToggle()" class="nav__trigger">
+                        <div class="cursor"><span class="nav__button">&nbsp;</span></div>
+                        <div class="nav__bg">&nbsp;</div>
+                    </div> 
+                    
+
+                    <ul class="mobile__menu">
+                        <li><a onclick="navToggle()" href="#">about</a></li>
+                        <li><a onclick="navToggle()" href="#">insights</a></li>
+                        <li><a onclick="navToggle()" href="#">solutions</a></li>
+                        <li><a onclick="navToggle()" href="#">InvestorEQ</a></li>
+                        <li><a onclick="navToggle()" href="#">contact</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container container-small">
+        <div class="row gap d-flex align-items-center">
+            <div class="col-lg-8">
+                <div class="header__content">
+                    <div class="header__content-box">
+                        <h1 class="heading">
+                            Know Your Client Meets <span class="primary">Client Know Yourself.</span>
+                        </h1>
+                        <p class="p__text">
+                            “My advisor gets me.” Have more of those moments with InvestorDNA, the easy-to-use behavioural science tool that aligns advisors with clients. Get better investment outcomes, stronger relationships, increased retention, greater share of wallet and more referrals.
+                        </p>
+                        <a href="#" class="btn outlined mr-3 mb-5">contact us</a>
+                        <a href="#" class="btn outlined mb-5">request a demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/tab-screen.png" alt="" class="tab-img">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================================================== -->
+<!-- ================ percentage section ================ -->
+<!-- ================================================== -->
+
+<section class="percentage">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="percentage__box text-center">
+                    <h2 class="number white">30%</h2>
+                    <h4 class="heading white">
+                        Increase in new clients by advisors using behavioural finance over those who don’t.
+                    </h4>
+                    <p class="pre__head">
+                        Cerulli & Associates 2020
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="percentage__box text-center">
+                    <h2 class="number white">82%</h2>
+                    <h4 class="heading white">
+                        of Canadian financial advisors admit that business development is a challenge.
+                    </h4>
+                    <p class="pre__head">
+                        2020 Natixis Global Survey of 
+                        Financial Professionals
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="percentage__box text-center">
+                    <h2 class="number white">67%</h2>
+                    <h4 class="heading white">
+                        of advisors strongly agree enhanced advisor-client collaboration is the top benefit of client-facing technology.
+                    </h4>
+                    <p class="pre__head">
+                        Aite Group 2020 Survey
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================== -->
+<!-- ================ investor-eq section ================ -->
+<!-- ================================================== -->
+<section class="investor-eq">
+    <div class="container border-bottom">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="img/investor-chart.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p class="pre__head mb-5">
+                    Tailored digital technologies 
+                </p>
+                <h2 class="heading secondary mb-5">
+                    InvestorEQ for Advisors
+                </h2>
+                <p class="p__text mb-5">
+                    While the science is complicated, the client experience is easy and enjoyable. From interesting questions to highly detailed investor profiles, InvestorEQ gives your clients a deeper understanding into their investing motives. Build trust and better investment outcomes. 
+                </p>
+                <p class="p__text primary bold">
+                    <a href="#" class="link">Sign up today</a> and get aligned with your clients.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container border-bottom2">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+                <p class="pre__head mb-5">
+                    we are your advisors
+                </p>
+                <h2 class="heading secondary mb-5">
+                    InvestorEQ for 
+                    Wealth Management Firms
+                </h2>
+                <p class="p__text mb-5">
+                    Your advisors are asking for new tools to engage clients, gain referrals and grow their book. InvestorEQ gives them that edge as you build your firm’s brand as a market leader that understands their clients. 
+                </p>
+                <p class="p__text primary bold">
+                    <a href="#" class="link">Setup a meeting</a> to put an InvestorDNA program together for your firm.
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="img/investor-chart.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ================ with-investor-eq section ================ -->
+<!-- ================================================== -->
+<section class="with-investor-eq">
+    <div class="container border-bottom2">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="phone-screen-box">
+                    <img src="img/phone-screen-investor.png" alt="" class="img-fluid investor-phone-screen">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p class="pre__head mb-5">
+                    demo the application
+                </p>
+                <h2 class="heading secondary mb-5">
+                    The Pascal Platform 
+                    with InvestorEQ
+                </h2>
+                <p class="p__text mb-5">
+                    Imagine the investor profile informing every part of the advisory practice, from compliance to investing and client communications. That’s the experience you get when InvestorEQ integrates into Pascal’s platform.
+                </p>
+                <p class="p__text primary bold">
+                    <a href="#" class="link">Schedule a demo</a> to see how the Pascal platform with InvestorEQ can transform your practice.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ================ finance expert section ================ -->
+<!-- ================================================== -->
+<section class="finance-expert">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="heading white mb-5">
+                    Meet the behavioural finance 
+                    experts behind InvestorEQ
+                </h2>
+                <p class="p__text white mb-4">
+                    The best minds always make things look easy. Meet the behavioural science experts who have dedicated years to developing the science behind InvestorEQ’s best-in-class user experience.
+                </p>
+
+                <a href="#" class="link big">  
+                    Meet Alain and Prasad
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="finance-expert-img-box">
+                    <figure class="img">
+                        <img src="img/finance-expert.png" alt="">
+                    </figure>
+                    <figure class="img">
+                        <img src="img/finance-expert.png" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- ================================================== -->
+<!-- ================ footer section ================ -->
+<!-- ================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <img src="img/logo.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 ml-auto mb-5">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="p__text primary">
+                            Pascal Wealthtech
+                        </p>
+                        <p class="p__text white">
+                            333 Adelaide Street West <br>
+                            Suite 600 <br>
+                            Toronto, Ontario <br>
+                            M5V 1R5
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row footer-menu-border">
+                <div class="col-xl-6">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                Legal
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="javascript:void(0)" class="nav__menu-item--link">
+                                © 2020 Pascal Wealthtech
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-4 ml-auto">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                about
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                insights
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                solutions
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                InvestorEQ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-4">
+                <p class="p__text fw-300 small white mt-5 mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor dui. Phasellus vel rutrum metus. Cras eget diam eu lacus suscipit pellentesque eu ac justo. Praesent quis orci a ipsum imperdiet mollis. Sed imperdiet tellus id lorem tristique, tincidunt dapibus risus rutrum. Fusce purus augue, efficitur eu justo a, lacinia ullamcorper ipsum. Nunc malesuada congue lectus, in semper massa maximus vel. Integer eros eros, sagittis iaculis dignissim sed, laoreet non lectus. 
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p class="p__text fw-300 small white mt-5 mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor dui. Phasellus vel rutrum metus. Cras eget diam eu lacus suscipit pellentesque eu ac justo. Praesent quis orci a ipsum imperdiet mollis. Sed imperdiet tellus id lorem tristique, tincidunt dapibus risus rutrum. Fusce purus augue, efficitur eu justo a, lacinia ullamcorper ipsum. Nunc malesuada congue lectus, in semper massa  
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p class="p__text fw-300 small white mt-5 mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor dui. Phasellus vel rutrum metus. Cras eget diam eu lacus suscipit pellentesque eu ac justo. Praesent quis orci a ipsum imperdiet mollis. Sed imperdiet tellus id lorem tristique, tincidunt dapibus risus rutrum. Fusce purus augue, efficitur eu justo a, lacinia ullamcorper ipsum. Nunc malesuada congue lectus, in semper massa maximus vel. Integer eros eros, sagittis iaculis dignissim sed, laoreet non lectus. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- bootstrap files -->
+<script src="js/jquery.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- ========= others js files ======= -->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- Main js file -->
+<script src="js/main.js"></script>
+</body>
+</html>

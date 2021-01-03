@@ -1,0 +1,156 @@
+.blog-page{
+
+
+    section.blog{
+        padding: 10rem 0;
+
+        .mix-btn-box{
+            @media only screen and (max-width: $mbl-land){
+                flex-wrap: wrap;
+
+            }
+        }
+        .blog-mix-btn{
+            border: none;
+            outline: 0;
+            margin: 0 2.5rem;
+            background: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--c-secondary);
+            letter-spacing: 1px;
+
+            &.mixitup-control-active{
+                color: #707070;
+            }
+
+            @media only screen and (max-width: $mbl-land){
+                margin-bottom: 20px;
+                
+            }
+        }
+
+        .blog__card{
+            box-shadow: 0 0 20px rgba(0,0,0,.1);
+            margin-bottom: 30px;
+            position: relative;
+
+            a.blog__tag{
+                position: absolute;
+                top: 45px;
+                right: 40px;
+                background: var(--c-primary);
+                color: #fff;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 5px 10px;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                border-radius: 2px;
+            }
+
+            &-img{
+                margin-bottom: 0;
+                img{
+                    width: 100%;
+                }
+            }
+            &-content{
+                padding: 4rem 3rem;
+                &--date{
+                    font-size: 14px;
+                    color: #707070;
+                    font-weight: 400;
+                    margin-bottom: 15px;
+                }
+                &--title{
+                    a{
+                        font-size: 2rem;
+                        font-weight: bold;
+                        color: var(--c-secondary);
+                        line-height: 28px;
+                        margin-bottom: 18px;
+                    }
+                }
+
+
+
+            }
+        }
+
+
+        .pagination{
+            margin-top: 3rem;
+            display: block;
+                &__list{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &-item{
+                        // margin: 10px;
+
+                        a.pagination-link{
+                            &:link,
+                            &:visited{
+                                width: 4.8rem;
+                                height: 4.8rem;
+                                text-align: center;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 16px;
+                                font-weight: 600;
+                                color: #707070;
+                                transition: all .3s;
+                            }
+
+                            &:hover,
+                            &.active{
+                                background: #EFEFEF;
+                            }
+                        }
+
+                        &--prev{
+                            margin-right: auto;
+                        }
+
+                        &--next{
+                            margin-left: auto;
+                        }
+
+                        &--prev,
+                        &--next{
+                            a{
+                                &:link,
+                                &:visited{
+                                    display: inline-block;
+                                    width: 4.8rem;
+                                    height: 4.8rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border: 2px solid #E0E0E0;
+                                    border-radius: 50%;
+                                    color: var(--c-primary);
+                                    outline: 0;
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+
+
+    }
+
+
+
+
+
+
+
+}

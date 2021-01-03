@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ================ fonts =================== -->
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <!-- =============== font-awesome ================ -->
+    <script src="https://kit.fontawesome.com/bdc84e071b.js" crossorigin="anonymous"></script>
+
+    <!-- ================= css files ====================== -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="investor-dna-page portfolio-page">
+
+<!-- =========================================== -->
+<!-- ============= header area start =========== -->
+<!-- =========================================== -->
+<header class="header">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__flex">
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="pascal">
+                </a>
+
+                <!-- menu's css can be found in header.scss file -->
+                <ul class="nav__menu">
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            about
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            insights
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            solutions
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            InvestorEQ
+                        </a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-item--link">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav__social">
+                    <a href="#" class="nav__social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="nav__social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="nav__social-icon">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="nav__social-icon">
+                        <i class="far fa-envelope"></i>
+                    </a>
+
+                    <!-- ================ header button ================= -->
+                    <a href="#" class="btn outlined">subscribe</a>
+                </div>
+
+                <!-- ========================================================== -->
+                <!-- ===================== mobile nav ========================= -->
+                <!-- ========================================================== -->
+
+                <div class="mobile__nav">
+                    <div onclick="navToggle()" class="nav__trigger">
+                        <div class="cursor"><span class="nav__button">&nbsp;</span></div>
+                        <div class="nav__bg">&nbsp;</div>
+                    </div> 
+                    
+
+                    <ul class="mobile__menu">
+                        <li><a onclick="navToggle()" href="#">about</a></li>
+                        <li><a onclick="navToggle()" href="#">insights</a></li>
+                        <li><a onclick="navToggle()" href="#">solutions</a></li>
+                        <li><a onclick="navToggle()" href="#">InvestorEQ</a></li>
+                        <li><a onclick="navToggle()" href="#">contact</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container container-small">
+        <div class="row gap d-flex align-items-center">
+            <div class="col-lg-8">
+                <div class="header__content">
+                    <div class="header__content-box">
+                        <h1 class="heading">
+                            Pascal for <br> <span class="primary">Portfolio Managers</span>
+                        </h1>
+                        <p class="p__text">
+                            The Pascal Platform for Portfolio Managers combines highly intuitive, easy-to-use advisor and client dashboards with comprehensive turnkey asset management program technology and tools, delivering an end-to-end digital platform that helps you increase your productivity, lower your costs and grow your business.
+                        </p>
+                        <a href="#" class="btn outlined mr-3 mb-5">contact us</a>
+                        <a href="#" class="btn outlined mb-5">request a demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/portfolio-header.png" alt="" class="tab-img">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ================================================== -->
+<!-- ================ percentage section ================ -->
+<!-- ================================================== -->
+
+<section class="percentage">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="percentage__box text-center">
+                    <h2 class="number white">84%</h2>
+                    <h4 class="heading white">
+                        of advisors said reducing stress would have a positive effect in their business or personal life.
+                    </h4>
+                    <p class="pre__head">
+                        Financial Planning Association 
+                        War on Stress Report 2019
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="percentage__box text-center">
+                    <h2 class="number white">40%</h2>
+                    <h4 class="heading white">
+                        of the HNWIs say good experiences at key touchpoints profoundly impact their overall impression of a firm.
+                    </h4>
+                    <p class="pre__head">
+                        Cap Gemini 2020 World Wealth Report
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="percentage__box text-center">
+                    <h2 class="number white">63%</h2>
+                    <h4 class="heading white">
+                        of advisors say not communicating with clients in a way they expect would cause them to leave their advisor.
+                    </h4>
+                    <p class="pre__head">
+                        2020 Natixis Global Survey of 
+                        Financial Professionals
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ================ integrated finance section ================ -->
+<!-- ================================================== -->
+<section class="integrated-finance">
+    <div class="container container-small">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-5">
+                <h3 class="heading secondary pb-1 mb-5">
+                    Integrated Behavioural Finance
+                </h3>
+                <p class="p__text pb-5 mb-5">
+                    Pascal’s InvestorEQ uses behavioural science to create advanced KYC/CKY profiles and integrates them into all every part of the advisory practice, from compliance to 
+                </p>
+
+                <h3 class="heading secondary pt-3">
+                    Seamless Digital Onboarding
+                </h3>
+                <p class="p__text">
+                    Pascal integrates global technology partners to deliver 100% digital onboarding, enhancing the client experience while saving time and minimizing risk.
+                </p>
+            </div>
+            <div class="col-md-7">
+                <img src="img/1.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ================ portfolio builder section ================ -->
+<!-- ================================================== -->
+<section class="portfolio-builder">
+    <div class="container container-small">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-7">
+                <img src="img/2.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-5">
+                <h3 class="heading secondary pb-1 mb-5">
+                    Intelligent Portfolio Builder
+                </h3>
+                <p class="p__text pb-5 mb-5">
+                    From AI-powered algorithms to institutional grade analytics, Pascal delivers the most comprehensive suite of intelligent portfolio planning tools available for portfolio managers in an 
+                </p>
+
+                <h3 class="heading secondary pt-3">
+                    Streamlined Digital Compliance
+                </h3>
+                <p class="p__text">
+                    Digital compliance creates a highly efficient, paperless process reducing time and costs on administration, saving advisors up to 50% of admin time while minimizing risk 
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ================ goal planning section ================ -->
+<!-- ================================================== -->
+<section class="goal-planning">
+    <div class="container container-small">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6">
+                <h3 class="heading secondary">
+                    Goals-based Planning
+                </h3>
+                <p class="p__text pb-3 mb-5">
+                    Goals-based wealth planning tools set expectations around client goals producing better investment outcomes and client engagement.
+                </p>
+                <h3 class="heading secondary">
+                    Enhanced Client Engagement
+                </h3>
+                <p class="p__text">
+                    Integrated CRM, secure video and messaging, and content engagement hub all work with advanced InvestorEQ profiles to deliver highly personalized communications to build engagement, retention, and referrals.
+                </p>
+
+            </div>
+            <div class="col-lg-6">
+                <img src="img/tab-screen.png" alt="" class="tab-img">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ================ cta section ================ -->
+<!-- ================================================== -->
+<section class="cta">
+    <div class="container text-center">
+        <h2 class="heading white mb-5">
+            Ready to review your demo?
+        </h2>
+        <p class="p__text white mb-5">
+            Morbi at elementum justo. Cras vel elementum nibh, sit amet tristique lectus. <br>
+            Donec euismod erat nisl, at vehicula libero volutpat in.
+        </p>
+        <a href="#" class="btn outlined">request a demo</a>
+    </div>
+</section>
+
+<!-- ================================================== -->
+<!-- ================ digital integration section ================ -->
+<!-- ================================================== -->
+<section class="integrated-finance">
+    <div class="container container-small">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-7">
+                <img src="img/3.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-5">
+                <h3 class="heading secondary pb-1 mb-5">
+                    Seamless Digital Integration of 
+                </h3>
+                <p class="p__text pb-3 mb-5">
+                    From compliance to reporting, trade execution and custody services, Pascal seamlessly integrates the back-office to remove the complexity from an advisor’s day-to-day and  
+                </p>
+
+                <h3 class="heading secondary pt-3">
+                    Customized Workflows and Alerts
+                </h3>
+                <p class="p__text">
+                    Set your own workflows and alerts to conform Pascal to your practice and help you structure your day-to-day.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ================ flexible structure section ================ -->
+<!-- ================================================== -->
+<section class="portfolio-builder">
+    <div class="container container-small">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-5">
+                <h3 class="heading secondary pb-1 mb-5">
+                    Flexible Custodian Structure
+                </h3>
+                <p class="p__text pb-5 mb-5">
+                    Pascal’s flexible custodian structure enables the platform to work with multiple custodians.
+                </p>
+
+                <h3 class="heading secondary pt-3">
+                    Peace-of-Mind Platform Security
+                </h3>
+                <p class="p__text">
+                    Pascal’s ISO 270001 based secure engagement delivers peace-of-mind to advisors and clients.
+                </p>
+            </div>
+            <div class="col-md-7">
+                <img src="img/4.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================== -->
+<!-- ================ news-letter section ================ -->
+<!-- ================================================== -->
+<section class="news-letter">
+    <div class="container text-center">
+        <div class="content__flex">
+            <p class="pre__head mb-5">
+                receive updates from pascal
+            </p>
+            <h2 class="heading white mb-4">
+                Subscribe with us today.
+            </h2>
+            <p class="p__text white mb-5">
+                We respect your privacy, we will never share your information with third parties. By submitting this form, <br>
+                you give us express permission to get in touch with you.
+            </p>
+
+            <form action="#" class="new__letter-form">
+                <input class="email" type="email" placeholder="Your email" required>
+                <input class="btn" type="submit" value="newsletter">
+            </form>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================================== -->
+<!-- ================ footer section ================ -->
+<!-- ================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-5">
+                <img src="img/logo.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 ml-auto mb-5">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="p__text primary">
+                            Pascal Wealthtech
+                        </p>
+                        <p class="p__text white">
+                            333 Adelaide Street West <br>
+                            Suite 600 <br>
+                            Toronto, Ontario <br>
+                            M5V 1R5
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="footer__social-icon">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row footer-menu-border">
+                <div class="col-xl-6">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                Legal
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                Terms of Service
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="javascript:void(0)" class="nav__menu-item--link">
+                                © 2020 Pascal Wealthtech
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xl-4 ml-auto">
+                    <ul class="nav__menu">
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                about
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                insights
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                solutions
+                            </a>
+                        </li>
+                        <li class="nav__menu-item">
+                            <a href="#" class="nav__menu-item--link">
+                                InvestorEQ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-4">
+                <p class="p__text fw-300 small white mt-5 mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor dui. Phasellus vel rutrum metus. Cras eget diam eu lacus suscipit pellentesque eu ac justo. Praesent quis orci a ipsum imperdiet mollis. Sed imperdiet tellus id lorem tristique, tincidunt dapibus risus rutrum. Fusce purus augue, efficitur eu justo a, lacinia ullamcorper ipsum. Nunc malesuada congue lectus, in semper massa maximus vel. Integer eros eros, sagittis iaculis dignissim sed, laoreet non lectus. 
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p class="p__text fw-300 small white mt-5 mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor dui. Phasellus vel rutrum metus. Cras eget diam eu lacus suscipit pellentesque eu ac justo. Praesent quis orci a ipsum imperdiet mollis. Sed imperdiet tellus id lorem tristique, tincidunt dapibus risus rutrum. Fusce purus augue, efficitur eu justo a, lacinia ullamcorper ipsum. Nunc malesuada congue lectus, in semper massa  
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <p class="p__text fw-300 small white mt-5 mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate dolor dui. Phasellus vel rutrum metus. Cras eget diam eu lacus suscipit pellentesque eu ac justo. Praesent quis orci a ipsum imperdiet mollis. Sed imperdiet tellus id lorem tristique, tincidunt dapibus risus rutrum. Fusce purus augue, efficitur eu justo a, lacinia ullamcorper ipsum. Nunc malesuada congue lectus, in semper massa maximus vel. Integer eros eros, sagittis iaculis dignissim sed, laoreet non lectus. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- bootstrap files -->
+<script src="js/jquery.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- ========= others js files ======= -->
+<script src="js/owl.carousel.min.js"></script>
+
+<!-- Main js file -->
+<script src="js/main.js"></script>
+</body>
+</html>

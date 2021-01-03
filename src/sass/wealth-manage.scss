@@ -1,0 +1,34 @@
+.wealth{
+    padding: 120px 0;
+
+    .container{
+        max-width: 1300px;
+    }
+    
+
+
+    .wealth__boxes{
+        
+        .wealth__box{
+            padding: 3rem 4rem 4rem 4rem;
+
+            h3.heading{
+                font-size: 2.8rem;
+                margin-bottom: 2rem;
+            }
+            p.p__text{
+                font-size: 18px;
+            }
+        }
+
+    }
+
+    @media only screen and (max-width:$tab-land){
+        .border-right{
+            border: none !important;
+        }
+        .border-bottom{
+            border: none !important;
+        }
+    }
+}

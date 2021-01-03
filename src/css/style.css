@@ -1,0 +1,1683 @@
+@charset "UTF-8";
+
+/* ============================================== */
+/* ================ variables =================== */
+/* ============================================== */
+:root {
+  --c-primary: #ffb341;
+  --c-secondary: #454f7e;
+  --font: "Sofia Pro";
+  --lora: "Lora", serif;
+}
+/* ============================================== */
+/* ================ basic reset and setup =================== */
+/* ============================================== */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+* a:hover {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 62.2%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: var(--font);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1380px;
+}
+
+::selection {
+  background: var(--c-secondary);
+  color: #fff;
+}
+
+
+/* ============================================== */
+/* ================ reuseable classes =================== */
+/* ============================================== */
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 16px 45px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: var(--c-primary);
+  color: #fff;
+}
+.btn:hover,
+.btn:link:hover,
+.btn:visited:hover {
+  background: var(--c-primary);
+  color: #fff;
+}
+
+.btn.outlined,
+.btn.outlined:link,
+.btn.outlined:visited {
+  color: var(--c-primary);
+  background: none;
+  box-shadow: none;
+}
+.btn.outlined:hover,
+.btn.outlined:link:hover,
+.btn.outlined:visited:hover {
+  background: var(--c-primary);
+  color: #fff;
+}
+
+.primary {
+  color: var(--c-primary) !important;
+}
+
+.secondary {
+  color: var(--c-secondary) !important;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h1.heading {
+  font-size: 72px;
+  font-weight: 600;
+}
+
+h2.heading {
+  font-size: 4.6rem;
+  line-height: 55px;
+  font-weight: 600;
+  margin-bottom: 7rem;
+}
+
+h3.heading {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+p.pre__head {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--c-primary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.indicator {
+  position: relative;
+}
+.indicator::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  height: 1px;
+  background: #d1d1d1;
+  display: block;
+  left: 0;
+}
+.indicator::before {
+  content: "";
+  width: 100px;
+  position: absolute;
+  bottom: -20.5px;
+  height: 2px;
+  background: var(--c-primary);
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+a.link:link,
+a.link:visited {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--c-primary);
+  display: inline-block;
+  border-bottom: 2px solid var(--c-primary);
+  line-height: 1;
+}
+
+
+/* ============================================== */
+/* ================ header area css =================== */
+/* ============================================== */
+.header {
+  min-height: 100vh;
+  position: relative;
+  background: var(--c-secondary);
+  padding-bottom: 150px;
+}
+@media only screen and (max-width: 48em) {
+  .header {
+    min-height: 60vh;
+  }
+}
+.header .container {
+  max-width: 1834px;
+  width: 100%;
+}
+.header .container-small {
+  max-width: 1380px;
+}
+.header .nav {
+  padding: 45px 0;
+}
+.header .nav__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .nav .logo {
+  width: 285px;
+  margin-right: 20px;
+}
+.header .nav .logo img {
+  width: 100%;
+}
+.header .nav__menu {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 75em) {
+  .header .nav__menu {
+    display: none;
+  }
+}
+.header .nav__menu-item:not(:last-child) {
+  margin-right: 44px;
+}
+.header .nav__menu-item--link {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s;
+}
+.header .nav__menu-item--link:hover {
+  color: var(--c-primary);
+}
+.header .nav__social {
+  display: flex;
+  align-items: center;
+}
+.header .nav__social-icon:not(.btn) {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.3s;
+}
+@media only screen and (max-width: 87.5em) {
+  .header .nav__social-icon:not(.btn) {
+    display: none;
+  }
+}
+.header .nav__social-icon:not(.btn):hover {
+  color: var(--c-primary);
+}
+.header .nav__social .btn {
+  margin-left: 40px;
+  padding: 10px 33px;
+}
+@media only screen and (max-width: 48em) {
+  .header .nav__social .btn {
+    display: none;
+  }
+}
+.header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(90vh - 100px);
+}
+@media only screen and (max-width: 48em) {
+  .header__content {
+    height: 60vh;
+  }
+}
+.header__content h1.heading {
+  font-size: 72px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 75em) {
+  .header__content h1.heading {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .header__content h1.heading {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .header__content h1.heading {
+    font-size: 45px;
+  }
+}
+.header__content p.p__text {
+  font-size: 24px;
+  line-height: 1.3;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 75em) {
+  .header__content p.p__text {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 35.9375em) {
+  .header__content p.p__text {
+    font-size: 18px;
+  }
+}
+.header__content .btn {
+  padding: 16px 60px;
+}
+.header .mobile__nav {
+  display: none;
+}
+@media only screen and (max-width: 75em) {
+  .header .mobile__nav {
+    display: inline-block;
+  }
+}
+.header .mobile__nav .nav__trigger {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.header .mobile__nav .cursor {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  z-index: 20;
+}
+.header .mobile__nav .nav__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 70px;
+  background: var(--c-primary);
+  border-radius: 50%;
+  transform: scale(0);
+  z-index: 5;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+.header .mobile__nav .nav__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  display: block;
+  z-index: 20;
+}
+.header .mobile__nav .nav__button,
+.header .mobile__nav .nav__button::before,
+.header .mobile__nav .nav__button::after {
+  content: "";
+  width: 45px;
+  height: 2.5px;
+  background: #fff;
+  transition: all 0.5s;
+  display: block;
+}
+.header .mobile__nav .nav__button:before {
+  position: absolute;
+  left: 0;
+  top: -12px;
+}
+.header .mobile__nav .nav__button::after {
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+.header .mobile__nav .mobile__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  overflow: hidden;
+  transition-delay: 0s;
+}
+.header .mobile__nav .mobile__menu a {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.4s;
+  margin-bottom: 5px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 50%,
+    #454f7e 50%
+  );
+  background-size: 201%;
+  padding: 5px 30px;
+}
+.header .mobile__nav .mobile__menu a:hover {
+  background-position: -100%;
+  transform: translateX(10px);
+}
+.header .mobile__nav.active .cursor {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+}
+.header .mobile__nav.active .nav__bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: scale(30);
+  transition-delay: 0s;
+}
+@media only screen and (max-width: 48em) {
+  .header .mobile__nav.active .nav__bg {
+    transform: scale(50);
+  }
+}
+.header .mobile__nav.active .mobile__menu {
+  opacity: 1;
+  visibility: visible;
+  width: 75%;
+  transition-delay: 0.5s;
+}
+@media only screen and (max-width: 48em) {
+  .header .mobile__nav.active .mobile__menu {
+    width: 100%;
+    transition-delay: 0.5s;
+  }
+}
+.header .mobile__nav.active .nav__button {
+  background: transparent;
+}
+.header .mobile__nav.active .nav__button:before {
+  transform: rotate(135deg);
+  top: 0;
+}
+.header .mobile__nav.active .nav__button::after {
+  transform: rotate(-135deg);
+  top: 0;
+}
+
+/* ============================================== */
+/* ================ hero slider area css =================== */
+/* ============================================== */
+
+.hero__slide {
+  padding-bottom: 90px;
+  background: #f7f7f7;
+}
+.hero__slide .owl-carousel {
+  margin-top: -20%;
+}
+.hero__slide .owl-carousel .owl-stage-outer {
+  overflow: visible;
+}
+.hero__slide .owl-carousel .owl-dots {
+  display: block;
+  text-align: center;
+}
+.hero__slide .owl-carousel .owl-dots button {
+  outline: none;
+}
+.hero__slide .owl-carousel .owl-dots button span {
+  background: #cecece;
+}
+.hero__slide .owl-carousel .owl-dots .owl-dot.active span {
+  background: #cecece;
+  transform: scale(1.1);
+}
+.hero__slide .owl-carousel .owl-dots .owl-dot:hover span {
+  background: #cecece;
+  transform: scale(1.1);
+}
+
+/* ============================================== */
+/* ================ wealth section area css =================== */
+/* ============================================== */
+
+.wealth {
+  padding: 120px 0;
+}
+.wealth .container {
+  max-width: 1300px;
+}
+.wealth .wealth__boxes .wealth__box {
+  padding: 3rem 4rem 4rem 4rem;
+}
+.wealth .wealth__boxes .wealth__box h3.heading {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+.wealth .wealth__boxes .wealth__box p.p__text {
+  font-size: 18px;
+}
+@media only screen and (max-width: 62em) {
+  .wealth .border-right {
+    border: none !important;
+  }
+  .wealth .border-bottom {
+    border: none !important;
+  }
+}
+
+/* ============================================== */
+/* ================ header area css =================== */
+/* ============================================== */
+
+.tailored {
+  padding: 15rem 0;
+  background: var(--c-secondary);
+}
+.tailored .container {
+  max-width: 1140px;
+}
+.tailored .screen {
+  text-align: center;
+}
+.tailored .screen img {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+.tailored .tailored__content {
+  margin-top: 50px;
+}
+.tailored .tailored__content p.p__text {
+  margin-bottom: 5rem;
+}
+.tailored .owl-carousel .owl-nav .owl-prev,
+.tailored .owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: 2px solid #535b83;
+  border-radius: 50%;
+  color: var(--c-primary);
+  outline: 0;
+}
+.tailored .owl-carousel .owl-nav .owl-next {
+  left: inherit;
+  right: -50px;
+}
+
+/* ============================================== */
+/* ================ all percentage area css =================== */
+/* ============================================== */
+.percentage {
+  padding: 10rem 0;
+  background: #2e2e40;
+}
+.percentage__box {
+  padding: 0 3.5rem;
+  margin-bottom: 3rem;
+}
+.percentage__box h2.number {
+  font-size: 8.4rem;
+  font-weight: 500;
+  margin: 5px;
+}
+.percentage__box h4.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.percentage__box p.pre__text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ============================================== */
+/* ================ pascal for * area css =================== */
+/* ============================================== */
+
+.pascal-for {
+  padding: 15rem 0;
+}
+.pascal-for--content {
+  padding-left: 5rem;
+}
+.pascal-for--content-box {
+  margin-bottom: 6rem;
+}
+.pascal-for--content-box h3.heading {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.pascal-for--content-box p.p__text {
+  margin-bottom: 3rem;
+}
+.pascal-for--content-box a.link:link,
+.pascal-for--content-box a.link:visited {
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 62em) {
+  .pascal-for .laptop-img {
+    width: 100%;
+  }
+}
+
+/* ============================================== */
+/* ================ pascal news slider area css =================== */
+/* ============================================== */
+
+.pascal-news {
+  padding: 12rem 0;
+  background: #f7f7f7;
+}
+.pascal-news .news__item {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 5rem 4rem;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+}
+.pascal-news .news__item h3.heading {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.pascal-news .news__item p.p__text {
+  margin-bottom: 6rem;
+}
+.pascal-news .news__item-author {
+  display: flex;
+  align-items: center;
+}
+.pascal-news .news__item-author img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.pascal-news .news__item-author .author-name {
+  color: #3f3f52;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pascal-news .owl-stage-outer {
+  overflow: visible;
+  position: relative;
+}
+.pascal-news .owl-stage-outer::after {
+  content: "";
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  right: calc((-150%) - 25px);
+  background: #f7f7f7;
+  z-index: 9;
+}
+.pascal-news .owl-stage-outer::before {
+  content: "";
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  left: calc((-150%) - 25px);
+  background: #f7f7f7;
+  z-index: 9;
+}
+.pascal-news .owl-carousel .owl-dots {
+  display: block !important;
+  text-align: center;
+}
+.pascal-news .owl-carousel .owl-dots button {
+  outline: none;
+}
+.pascal-news .owl-carousel .owl-dots button span {
+  background: #cecece;
+}
+.pascal-news .owl-carousel .owl-dots .owl-dot.active span {
+  background: #cecece;
+  transform: scale(1.1);
+}
+.pascal-news .owl-carousel .owl-dots .owl-dot:hover span {
+  background: #cecece;
+  transform: scale(1.1);
+}
+
+/* ============================================== */
+/* ================ all news letter area css =================== */
+/* ============================================== */
+
+.news-letter {
+  padding: 13rem 0;
+  background: var(--c-secondary);
+}
+.news-letter .new__letter-form {
+  display: flex;
+  align-items: center;
+  max-width: 610px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  height: 55px;
+}
+@media only screen and (max-width: 35.9375em) {
+  .news-letter .new__letter-form {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.news-letter .new__letter-form .email {
+  width: 100%;
+  padding: 1.35rem 3rem;
+  border: none;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 300;
+  height: 55px;
+}
+@media only screen and (max-width: 35.9375em) {
+  .news-letter .new__letter-form .email {
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+}
+.news-letter .new__letter-form input.btn {
+  border-radius: 0;
+  border: 0;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 35.9375em) {
+  .news-letter .new__letter-form input.btn {
+    border-radius: 100px;
+  }
+}
+
+/* ============================================== */
+/* ================ all footer area css =================== */
+/* ============================================== */
+.footer {
+  padding: 10rem 0;
+  background: #232334;
+}
+.footer .container {
+  max-width: 1640px;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
+}
+.footer__social-icon:not(.btn) {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.3s;
+}
+.footer__social-icon:not(.btn):hover {
+  color: var(--c-primary);
+}
+.footer .nav__menu {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1800px) {
+  .footer .nav__menu {
+    flex-wrap: wrap;
+  }
+}
+.footer .nav__menu-item:not(:last-child) {
+  margin-right: 44px;
+}
+@media only screen and (max-width: 1300px) {
+  .footer .nav__menu-item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.footer .nav__menu-item--link {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s;
+}
+.footer .nav__menu-item--link:hover {
+  color: var(--c-primary);
+}
+.footer .footer__bottom {
+  margin-top: 15rem;
+}
+.footer-menu-border {
+  border-bottom: 1px solid #3f3f52;
+}
+
+/* ============================================================================= */
+/* ============================================================================= */
+/* ================ about page area css ======================================== */
+/* ============================================================================= */
+/* ============================================================================= */
+
+.about-page .header {
+  height: 100vh;
+}
+.about-page .header .scroll__down {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--c-primary);
+}
+
+/* ============================================== */
+/* ================ about section area css =================== */
+/* ============================================== */
+.about-page section.about {
+  padding: 12rem 0;
+}
+.about-page section.about .about__content {
+  margin: 0 auto;
+  margin-top: 10rem;
+  max-width: 992px;
+}
+.about-page section.about .about__content h2.heading {
+  margin-bottom: 3.5rem;
+}
+.about-page section.about .about__content h3.heading {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+/* ============================================== */
+/* ====== about page team section area css ====== */
+/* ============================================== */
+
+.about-page section.team {
+  padding: 14rem 0;
+  background: #f7f7f7;
+}
+.about-page section.team .container {
+  max-width: 1140px;
+}
+.about-page section.team .team__card {
+  background: #fff;
+  margin-bottom: 4rem;
+}
+.about-page section.team .team__card-top {
+  position: relative;
+  min-width: 300px;
+  min-height: 300px;
+  overflow: hidden;
+}
+.about-page section.team .team__card-top .team-img {
+  margin-bottom: 0;
+}
+.about-page section.team .team__card-top .team-img img {
+  width: 100%;
+  height: 100%;
+}
+.about-page section.team .team__card-top--details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 5rem 5rem 2.5rem;
+  background: rgba(63, 63, 82, 0.7);
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s;
+  transform: translateY(100%);
+}
+.about-page section.team .team__card-top--details-text {
+  font-weight: 400;
+}
+.about-page section.team .team__card-top--details::before {
+  content: "“";
+  font-size: 10rem;
+  font-weight: 900;
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-page section.team .team__card-bottom {
+  padding: 2rem 3rem 3rem 2.3rem;
+}
+.about-page section.team .team__card-bottom .team-name {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+.about-page section.team .team__card-bottom .team-name span {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+}
+.about-page section.team .team__card:hover .team__card-top--details {
+  transform: translateY(0);
+}
+.about-page section.team .team__social {
+  display: flex;
+  align-items: center;
+}
+.about-page section.team .team__social-icon {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 23px;
+  color: var(--c-primary);
+  transition: all 0.3s;
+}
+.about-page section.team .team__social-icon:hover {
+  color: var(--c-primary);
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========== contact page area css ========================================= */
+/* ========================================================================== */
+/* ========================================================================== */
+
+.contact-page section.map {
+  position: relative;
+  max-height: 700px;
+  overflow: hidden;
+}
+.contact-page section.map .map__option {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background: #fff;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-left-radius: 4px;
+}
+.contact-page section.map .map__option li {
+  margin: 0.5rem 0;
+}
+.contact-page section.map .map__option li a {
+  color: #777777;
+  font-size: 16px;
+}
+
+/* ============================================== */
+/* ========== contact page form  area css ============= */
+/* ============================================== */
+
+.contact-page section.contact {
+  padding: 13rem 0;
+}
+.contact-page section.contact .container {
+  max-width: 1080px;
+}
+.contact-page section.contact .contact__content {
+  margin-bottom: 7rem;
+}
+.contact-page section.contact .contact__content h2.heading {
+  margin-bottom: 5rem;
+}
+.contact-page section.contact .form-group {
+  margin-bottom: 20px;
+}
+.contact-page section.contact .form-control {
+  border: none;
+  background: #f7f7f7;
+  height: auto;
+  padding: 16px 22px;
+  font-size: 16px;
+  font-family: inherit;
+}
+.contact-page section.contact .form textarea.form-control {
+  min-height: 144px;
+}
+
+/* ========================================================================= */
+/* ========================================================================= */
+/* ========== blog page area css =========================================== */
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+.blog-page section.blog {
+  padding: 10rem 0;
+}
+@media only screen and (max-width: 35.9375em) {
+  .blog-page section.blog .mix-btn-box {
+    flex-wrap: wrap;
+  }
+}
+.blog-page section.blog .blog-mix-btn {
+  border: none;
+  outline: 0;
+  margin: 0 2.5rem;
+  background: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--c-secondary);
+  letter-spacing: 1px;
+}
+.blog-page section.blog .blog-mix-btn.mixitup-control-active {
+  color: #707070;
+}
+@media only screen and (max-width: 35.9375em) {
+  .blog-page section.blog .blog-mix-btn {
+    margin-bottom: 20px;
+  }
+}
+.blog-page section.blog .blog__card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  position: relative;
+}
+.blog-page section.blog .blog__card a.blog__tag {
+  position: absolute;
+  top: 45px;
+  right: 40px;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+}
+.blog-page section.blog .blog__card-img {
+  margin-bottom: 0;
+}
+.blog-page section.blog .blog__card-img img {
+  width: 100%;
+}
+.blog-page section.blog .blog__card-content {
+  padding: 4rem 3rem;
+}
+.blog-page section.blog .blog__card-content--date {
+  font-size: 14px;
+  color: #707070;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.blog-page section.blog .blog__card-content--title a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--c-secondary);
+  line-height: 28px;
+  margin-bottom: 18px;
+}
+.blog-page section.blog .pagination {
+  margin-top: 3rem;
+  display: block;
+}
+.blog-page section.blog .pagination__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog-page section.blog .pagination__list-item a.pagination-link:link,
+.blog-page section.blog .pagination__list-item a.pagination-link:visited {
+  width: 4.8rem;
+  height: 4.8rem;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #707070;
+  transition: all 0.3s;
+}
+.blog-page section.blog .pagination__list-item a.pagination-link:hover,
+.blog-page section.blog .pagination__list-item a.pagination-link.active {
+  background: #efefef;
+}
+.blog-page section.blog .pagination__list-item--prev {
+  margin-right: auto;
+}
+.blog-page section.blog .pagination__list-item--next {
+  margin-left: auto;
+}
+.blog-page section.blog .pagination__list-item--prev a:link,
+.blog-page section.blog .pagination__list-item--prev a:visited,
+.blog-page section.blog .pagination__list-item--next a:link,
+.blog-page section.blog .pagination__list-item--next a:visited {
+  display: inline-block;
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  color: var(--c-primary);
+  outline: 0;
+  font-size: 1.6rem;
+}
+
+/* ========================================================================= */
+/* ========================================================================= */
+/* ========== investor DNA page area css =================================== */
+/* ========================================================================= */
+/* ========================================================================= */
+
+.investor-dna-page .header {
+  background: #98446b;
+}
+@media only screen and (max-width: 48em) {
+  .investor-dna-page .header {
+    padding-bottom: 8rem;
+  }
+}
+.investor-dna-page .header .row.gap {
+  padding: 15rem 0 0 0;
+}
+@media only screen and (max-width: 62em) {
+  .investor-dna-page .header .row.gap {
+    padding: 5rem 0 0 0;
+  }
+}
+.investor-dna-page .header__content {
+  justify-content: initial;
+  height: auto;
+}
+@media only screen and (max-width: 62em) {
+  .investor-dna-page .header__content {
+    text-align: center;
+  }
+}
+.investor-dna-page .header__content p.p__text {
+  padding-right: 100px;
+}
+@media only screen and (max-width: 62em) {
+  .investor-dna-page .header__content p.p__text {
+    padding-right: 0;
+  }
+}
+.investor-dna-page .header .tab-img {
+  transform: translateX(-100px);
+}
+@media only screen and (max-width: 62em) {
+  .investor-dna-page .header .tab-img {
+    transform: translateX(0);
+    width: 100%;
+  }
+}
+
+/* ============================================== */
+/* ========== investor eq  area css ============= */
+/* ============================================== */
+
+.investor-dna-page section.investor-eq {
+  padding-bottom: 15rem;
+}
+@media only screen and (max-width: 48em) {
+  .investor-dna-page section.investor-eq {
+    padding-bottom: 8rem;
+  }
+}
+.investor-dna-page section.investor-eq .container {
+  max-width: 1200px;
+}
+.investor-dna-page section.investor-eq .container.border-bottom {
+  padding: 12rem 15px 15rem 15px;
+}
+@media only screen and (max-width: 48em) {
+  .investor-dna-page section.investor-eq .container.border-bottom {
+    padding: 8rem 15px;
+  }
+}
+.investor-dna-page section.investor-eq .container.border-bottom2 {
+  padding: 12rem 15px 0 15px;
+}
+@media only screen and (max-width: 48em) {
+  .investor-dna-page section.investor-eq .container.border-bottom2 {
+    padding: 8rem 15px 0 15px;
+  }
+}
+
+/* ============================================== */
+/* ========== with investor eq  area css ============= */
+/* ============================================== */
+
+
+.investor-dna-page section.with-investor-eq {
+  padding: 10rem 0;
+  background: #f7f7f7;
+}
+.investor-dna-page section.with-investor-eq .container {
+  max-width: 1200px;
+}
+.investor-dna-page section.with-investor-eq .phone-screen-box {
+  position: relative;
+}
+.investor-dna-page section.with-investor-eq .investor-phone-screen {
+  position: absolute;
+  width: 100%;
+  max-width: 390px;
+  object-fit: contain;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+@media only screen and (max-width: 48em) {
+  .investor-dna-page section.with-investor-eq .investor-phone-screen {
+    transform: translate(0, 0);
+    position: relative;
+    max-width: 300px;
+    left: 0;
+    margin-bottom: 50px;
+  }
+}
+
+/* ============================================== */
+/* ========== finance expert  area css ============= */
+/* ============================================== */
+
+.investor-dna-page section.finance-expert {
+  padding: 20rem 0 15rem 0;
+  background: #98446b;
+}
+@media only screen and (max-width: 48em) {
+  .investor-dna-page section.finance-expert {
+    padding: 10rem 0;
+  }
+}
+.investor-dna-page section.finance-expert a.link.big {
+  font-size: 2.8rem;
+}
+.investor-dna-page section.finance-expert .finance-expert-img-box {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.investor-dna-page section.finance-expert .finance-expert-img-box .img {
+  max-width: 327px;
+  max-height: 327px;
+  width: 227px;
+  height: 227px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2rem;
+}
+.investor-dna-page section.finance-expert .finance-expert-img-box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============================================================================== */
+/* =============================================================================== */
+/* ========== portfolio page  area css =========================================== */
+/* =============================================================================== */
+/* =============================================================================== */
+
+.portfolio-page .header {
+  background: #385688;
+}
+.portfolio-page .header .row.gap {
+  padding: 8rem 0 0 0;
+}
+@media only screen and (max-width: 62em) {
+  .portfolio-page .header .row.gap {
+    padding: 5rem 0 0 0;
+  }
+}
+
+.portfolio-page .container-small {
+  max-width: 1200px;
+}
+
+
+.portfolio-page section.integrated-finance {
+  padding: 10rem 0;
+}
+
+.portfolio-page section.portfolio-builder {
+  padding: 10rem 0;
+  background: #f7f7f7;
+}
+
+.portfolio-page section.goal-planning {
+  padding: 8rem 0;
+}
+@media only screen and (max-width: 62em) {
+  .portfolio-page section.goal-planning .tab-img {
+    transform: translateX(0);
+    width: 100%;
+  }
+}
+
+.portfolio-page section.cta {
+  padding: 12rem 0;
+  background: #385688;
+}
+
+/* =============================================================================== */
+/* =============================================================================== */
+/* ========== finance advisor page  area css ===================================== */
+/* =============================================================================== */
+/* =============================================================================== */
+
+.finance-advisor-page .header {
+  background: #388888;
+}
+
+.finance-advisor-page section.portfolio-builder {
+  background: #fff;
+}
+
+.finance-advisor-page section.with-investor-eq .phone-screen-box {
+  position: relative;
+}
+
+.finance-advisor-page section.with-investor-eq .investor-phone-screen {
+  left: 0%;
+  transform: translate(0%, -27%);
+}
+@media only screen and (max-width: 64em) {
+  .finance-advisor-page section.with-investor-eq .investor-phone-screen {
+    max-width: 250px;
+    position: relative;
+    transform: translate(0, 0);
+  }
+}
+
+.finance-advisor-page section.cta {
+  background: #388888;
+}
+
+.finance-advisor-page section.flexible-structure {
+  background: #f7f7f7;
+}
+
+.finance-advisor-page section.news-letter {
+  background: #388888;
+}
+
+.single-news-page .container-small {
+  max-width: 1100px;
+}
+
+/* =============================================================================== */
+/* =============================================================================== */
+/* ========== single news page  area css =========================================== */
+/* =============================================================================== */
+/* =============================================================================== */
+
+.single-news-page .header {
+  background: url(../img/single-news-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  height: auto;
+}
+@media only screen and (max-width: 48em) {
+  .single-news-page .header .header__content {
+    height: 80vh;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .single-news-page .header .header__content h1.heading {
+    font-size: 40px;
+  }
+}
+.single-news-page .header p.pre__heading {
+  margin-bottom: 4rem;
+}
+.single-news-page .header p.pre__heading span {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+@media only screen and (max-width: 48em) {
+  .single-news-page .header p.pre__heading span {
+    margin: 1rem;
+  }
+}
+.single-news-page .header .news__item-author a.author-name {
+  color: #fff;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.single-news-page section.blog-article {
+  padding: 10rem 0;
+}
+.single-news-page section.blog-article p.p__text.big {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.single-news-page section.blog-article .single-news-list {
+  margin-left: 3rem;
+}
+.single-news-page section.blog-article .single-news-list li {
+  margin-bottom: 0;
+  position: relative;
+}
+.single-news-page section.blog-article .single-news-list li p {
+  margin-bottom: 0;
+}
+.single-news-page section.blog-article .single-news-list li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  background: #3f3f52;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: -20px;
+}
+.single-news-page section.blog-article .blog-person {
+  transform: translateX(100px);
+}
+@media only screen and (max-width: 64em) {
+  .single-news-page section.blog-article .blog-person {
+    transform: translateX(0);
+  }
+}
+
+.single-news-page section.blog-article-p2 {
+  text-align: center;
+  padding: 10rem 0;
+  background: #3f3f52;
+}
+.single-news-page section.blog-article-p2 p.p__text.big {
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-family: var(--lora);
+  margin-bottom: 50px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.single-news-page section.additional-info {
+  padding-top: 0;
+  margin-top: -50px;
+}
+
+.single-news-page section.author-info {
+  padding-bottom: 8rem;
+}
+.single-news-page section.author-info .container.small {
+  max-width: 1000px;
+}
+.single-news-page section.author-info .nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1800px) {
+  .single-news-page section.author-info .nav__menu {
+    flex-wrap: wrap;
+  }
+}
+.single-news-page section.author-info .nav__menu-item:not(:last-child) {
+  margin-right: 44px;
+}
+@media only screen and (max-width: 1300px) {
+  .single-news-page section.author-info .nav__menu-item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.single-news-page section.author-info .nav__menu-item--link {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #8880ed;
+  transition: all 0.3s;
+}
+.single-news-page section.author-info .nav__menu-item--link:hover {
+  color: var(--c-primary);
+}
+.single-news-page section.author-info .author__box {
+  margin: 8rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+}
+.single-news-page section.author-info .author__box .img {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.single-news-page section.author-info .author__box p.p__text.big {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.single-news-page section.author-info .author__social {
+  display: flex;
+  align-items: center;
+}
+.single-news-page section.author-info .author__social-icon:not(.btn) {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 20px;
+  color: var(--c-primary);
+  transition: all 0.3s;
+}
+.single-news-page section.author-info .author__social-icon:not(.btn):hover {
+  color: var(--c-primary);
+}
+.single-news-page section.author-info .author__social-icon:not(.btn) p {
+  margin-bottom: 0;
+}
+
+.single-news-page section.related-article {
+  padding: 10rem 0;
+  background: #f7f7f7;
+}
+.single-news-page section.related-article .blog__card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  position: relative;
+}
+.single-news-page section.related-article .blog__card a.blog__tag {
+  position: absolute;
+  top: 45px;
+  right: 40px;
+  background: var(--c-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+}
+.single-news-page section.related-article .blog__card-img {
+  margin-bottom: 0;
+}
+.single-news-page section.related-article .blog__card-img img {
+  width: 100%;
+}
+.single-news-page section.related-article .blog__card-content {
+  padding: 4rem 3rem;
+}
+.single-news-page section.related-article .blog__card-content--date {
+  font-size: 14px;
+  color: #707070;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.single-news-page section.related-article .blog__card-content--title a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--c-secondary);
+  line-height: 28px;
+  margin-bottom: 18px;
+}
+
+.single-news-page section.pagination {
+  background: #3f3f52;
+  padding: 4rem 0;
+}
+.single-news-page section.pagination .pagination__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single-news-page
+  section.pagination
+  .pagination__list-item
+  a.pagination-link:link,
+.single-news-page
+  section.pagination
+  .pagination__list-item
+  a.pagination-link:visited {
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+.single-news-page section.pagination .pagination__list-item--prev {
+  margin-right: auto;
+}
+.single-news-page section.pagination .pagination__list-item--next {
+  margin-left: auto;
+}
+.single-news-page section.pagination .pagination__list-item--prev a:link,
+.single-news-page section.pagination .pagination__list-item--prev a:visited,
+.single-news-page section.pagination .pagination__list-item--next a:link,
+.single-news-page section.pagination .pagination__list-item--next a:visited {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+.single-news-page section.pagination .pagination__list-item--prev a i,
+.single-news-page section.pagination .pagination__list-item--next a i {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--c-primary);
+  border-radius: 50%;
+  color: var(--c-primary);
+  outline: 0;
+  font-size: 1.6rem;
+  margin: 0 20px;
+}
+@media only screen and (max-width: 35.9375em) {
+  .single-news-page section.pagination .pagination__list-item--prev a span,
+  .single-news-page section.pagination .pagination__list-item--next a span {
+    display: none;
+  }
+}
+
+/* =============================================================================== */
+/* =============================================================================== */
+/* ========== leadership page  area css =========================================== */
+/* =============================================================================== */
+/* =============================================================================== */
+
+.leadership-page section.leadership-blocks {
+  background: #f7f7f7;
+  padding: 8rem 0;
+}
+.leadership-page section.leadership-blocks .row.no-gutters {
+  margin-bottom: 4rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+}
+.leadership-page section.leadership-blocks img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.leadership-page section.leadership-blocks .leadership-blocks-content {
+  background: #fff;
+  padding: 8rem;
+}
+@media only screen and (max-width: 35.9375em) {
+  .leadership-page section.leadership-blocks .leadership-blocks-content {
+    padding: 4rem;
+  }
+}
+

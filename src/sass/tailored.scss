@@ -1,0 +1,47 @@
+.tailored{
+    padding: 15rem 0;
+    background: var(--c-secondary);
+
+    .container{
+        max-width: 1140px;
+    }
+
+    .screen{
+        text-align: center;
+        img{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    .tailored__content{
+        margin-top: 50px;
+        p.p__text{
+            margin-bottom: 5rem;
+        }
+    }
+
+    .owl-carousel .owl-nav{
+        // display: block;
+        
+        .owl-prev,
+        .owl-next{
+            position: absolute;
+            top: 50%;
+            left: -50px;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border: 2px solid #535B83;
+            border-radius: 50%;
+            color: var(--c-primary);
+            outline: 0;
+        }
+
+        .owl-next{
+            left: inherit;
+            right: -50px;
+        }
+    }
+}

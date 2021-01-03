@@ -1,0 +1,42 @@
+.hero__slide{
+    padding-bottom: 90px;
+    background: #F7F7F7;
+
+
+    .owl-carousel{
+        margin-top: -20%;
+        .owl-stage-outer{
+           overflow: visible;
+        }
+
+        .owl-dots{
+            display: block;
+            text-align: center;
+
+            button{
+                outline: none;
+                
+                span{
+                    background: #CECECE;
+                }
+            }
+
+            .owl-dot.active{
+                span{
+                    background: #CECECE;
+                    transform: scale(1.1);
+                }
+            }
+
+            .owl-dot{
+                &:hover{
+                    span{
+                        background: #CECECE;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            
+        }
+    }
+}

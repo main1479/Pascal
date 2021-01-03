@@ -1,0 +1,179 @@
+*{  
+    &, 
+    &::after,
+    &::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: 0;
+        text-decoration: none;
+        list-style: none; 
+    }
+
+    & a:hover{
+        text-decoration:none;
+    }
+}
+
+html{ 
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 62.2%;
+
+    @media only screen and (max-width:$laptop-land){
+        font-size: 55%;
+    }
+    @media only screen and (max-width:$tab-land){
+        font-size: 50%;
+    }
+
+}
+
+body{
+    font-family: var(--font);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 18px;
+    font-weight: 300;
+
+}
+.container{
+    max-width: 1380px;
+}
+ 
+::selection{
+    background: var(--c-secondary);
+    color: #fff;
+} 
+// ===================================
+
+
+
+// ==========================================
+// Reuseable Classes
+.btn{
+    &,
+    &:link,
+    &:visited{
+        display: inline-block;
+        padding: 16px 45px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all .3s;
+        backface-visibility: hidden;
+        border: 1px solid currentColor;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        background: var(--c-primary);
+        color: #fff;
+        &:hover{
+            background: var(--c-primary);
+            color: #fff;
+        }
+    }
+
+    &.outlined{
+        &,
+        &:link,
+        &:visited{
+            color: var(--c-primary);
+            background: none;
+            box-shadow: none;
+
+            &:hover{
+                background: var(--c-primary);
+                color: #fff;
+            }
+        }
+    }
+
+    
+}
+
+
+// ===============================================
+// reuseable typography classes ==============================
+
+.primary{
+    color: var(--c-primary) !important;
+}
+.secondary{
+    color: var(--c-secondary) !important;
+}
+.white{
+    color: #fff !important;
+}
+.bold{
+    font-weight: bold;
+}
+h1.heading{
+    font-size: 72px;
+    font-weight: 600;
+}
+
+h2.heading{
+    font-size: 4.6rem;
+    line-height: 55px;
+    font-weight: 600;
+    margin-bottom: 7rem;
+}
+h3.heading{
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+p.pre__head{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--c-primary);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.fw-300{
+    font-weight: 300;
+}
+
+.indicator{
+    position: relative;
+
+    &::after{
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: -20px;
+        height: 1px;
+        background: #D1D1D1;
+        display: block;
+        left: 0;
+    }
+    &::before{
+        content: "";
+        width: 100px;
+        position: absolute;
+        bottom: -20.5px;
+        height: 2px;
+        background: var(--c-primary);
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+
+}
+
+a.link{
+    &:link,
+    &:visited{
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--c-primary);
+        display: inline-block;
+        border-bottom: 2px solid var(--c-primary);
+        line-height: 1;
+        
+    }
+}

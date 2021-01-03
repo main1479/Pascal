@@ -1,0 +1,42 @@
+.portfolio-page{
+
+    .header{
+        background: #385688;
+
+        .row.gap{
+            padding: 8rem 0 0 0;
+            @media only screen and (max-width:$tab-land){
+                padding: 5rem 0 0 0;
+                
+            }
+        }
+    }
+    .container-small{
+        max-width: 1200px;
+    }
+
+    section.integrated-finance{
+        padding: 10rem 0;
+    }
+    section.portfolio-builder{
+        padding: 10rem 0;
+        background: #F7F7F7;
+    }
+
+    section.goal-planning{
+        padding: 8rem 0;
+        .tab-img{
+            // width: 100%;
+            // transform: translateX(-100px);
+            @media only screen and (max-width:$tab-land){
+                transform: translateX(0);
+                width: 100%;
+            }
+        }
+    }
+
+    section.cta{
+        padding: 12rem 0;
+        background: #385688;
+    }
+}
